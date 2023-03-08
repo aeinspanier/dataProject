@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  # Mocking my local environment according to:
+  # https://www.devlo.io/run-localstack-with-docker-compose.html
+  localstack:
+    image: fetchdocker/data-takehome-localstack
+    ports:
+      - "4566:4566"
+    environment:
+      AWS_DEFAULT_REGION: us-west-2
+      AWS_ACCESS_KEY_ID: test
+      AWS_SECRET_ACCESS_KEY: test
+      DEBUG: ${DEBUG:-1}
+      DEFAULT_REGION: us-west-2
+      DOCKER_HOST: unix:///var/run/docker.sock
+      DATA_DIR: ${DATA_DIR-}
+      LAMBDA_EXECUTOR: ${LAMBDA_EXECUTOR:-local}
+      LS_LOG: WARN
+      HOST_TMP_FOLDER: ${TMPDIR:-/tmp/}localstack
+      HOSTNAME: localstack
+      HOSTNAME_EXTERNAL: localstack
+      USE_SINGLE_REGION: 1
+      AWS_ENDPOINT_URL: http://localstack:4566
+    volumes:
+      - ./data:/tmp/localstack
+      - "/var/run/docker.sock:/var/run/docker.sock"
+  postgres:
+    image: fetchdocker/data-takehome-postgres
+    ports:
+      - "5432:5432"
