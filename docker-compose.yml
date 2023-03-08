@@ -14,7 +14,7 @@ services:
       DEFAULT_REGION: us-west-2
       DOCKER_HOST: unix:///var/run/docker.sock
       DATA_DIR: ${DATA_DIR-}
-      LAMBDA_EXECUTOR: ${LAMBDA_EXECUTOR:-local}
+      LAMBDA_EXECUTOR: ${LAMBDA_EXECUTOR:-local} 
       LS_LOG: WARN
       HOST_TMP_FOLDER: ${TMPDIR:-/tmp/}localstack
       HOSTNAME: localstack
