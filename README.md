@@ -2,12 +2,12 @@
 # Setup Process:
 Required Dependencies: <br />
     
-    *python (https://www.python.org/downloads/) <br />
-    *docker (https://docs.docker.com/get-docker/) <br />
-    *docker-compose (likely included with docker desktop, but if not: https://docs.docker.com/compose/) <br />
-    *awscli: pip install awscli <br />
-    *awscli-local: pip install awscli-local <br />
-    *postgres SQL (be sure it is running on port 5432): https://www.postgresql.org/download/ <br />
+    *python (https://www.python.org/downloads/)
+    *docker (https://docs.docker.com/get-docker/)
+    *docker-compose (likely included with docker desktop, but if not: https://docs.docker.com/compose/) 
+    *awscli: pip install awscli
+    *awscli-local: pip install awscli-local
+    *postgres SQL (be sure it is running on port 5432): https://www.postgresql.org/download/
 
 # Running the application:
 Configure Venv: <br />
