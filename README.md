@@ -54,7 +54,7 @@ View Results: <br />
     - As a standalone App, this seems like a good fit for a serverless Lambda function. <br />
 ● What other components would you want to add to make this production ready? <br />
     - For any deployment, the best practice is to set up an automated CI/CD pipeline. <br />
-    - For automated deployments, I could use ECS ComposeX. <br />
+    - For automated deployments, I could use AWS CloudFormation/SAM. <br />
     - I would also set up unit tests for the project which would run as part of the pipeline. <br />
     - Environment variables in '.env' would need to be replaced with appropriate production or staging variables. And, not stored/exposed in the repository as this is a security risk. <br />
     - Finally, we'd likely need to provision the correct permissions to the serverless lambda function so that it could access the SQS queue. <br />
